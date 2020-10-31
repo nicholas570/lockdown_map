@@ -1,9 +1,9 @@
+import Router from './Router';
+
 import './App.css';
 
-import { Button } from 'react-bootstrap';
-
 function App() {
-  return <Button>hello</Button>;
+  return <Router />;
 }
 
 export default App;
