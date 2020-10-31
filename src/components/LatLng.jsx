@@ -40,10 +40,11 @@ function LatLng() {
     );
     const latLng = `${lat}, ${lng}`;
     if (regex.test(latLng)) {
-      const coords = [
-        { latitude: parseFloat(lat.split(',').join('.'), 10) },
-        { longitude: parseFloat(lng.split(',').join('.'), 10) },
-      ];
+      const coords = {
+        latitude: parseFloat(lat.split(',').join('.'), 10),
+        longitude: parseFloat(lng.split(',').join('.'), 10),
+      };
+
       setDisplaySuccessToast(true);
       successNotify();
       setTimeout(() => {
