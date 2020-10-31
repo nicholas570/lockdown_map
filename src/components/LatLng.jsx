@@ -14,7 +14,7 @@ function LatLng() {
   const successNotify = () =>
     toast.dark('🔥🔥🔥 Get ready', {
       position: 'bottom-right',
-      autoClose: 5000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
