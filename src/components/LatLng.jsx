@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { Row, Col, Form, Button } from 'react-bootstrap';
 
 function LatLng() {
   const [lat, setLat] = useState();
   const [lng, setLng] = useState();
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +19,10 @@ function LatLng() {
         { latitude: parseFloat(lat.split(',').join('.'), 10) },
         { longitude: parseFloat(lng.split(',').join('.'), 10) },
       ];
-      alert(coords);
+      history.push({
+        pathname: '/map',
+        state: coords,
+      });
     } else {
       alert('Wrong coordinates');
     }
